@@ -22,7 +22,7 @@ $('input[type=file]' + custom_selector).each(function(i,elem){
   }
 
   // Set the word to be displayed on the button
-  var buttonWord = 'Browse';
+  var buttonWord = $(elem).data('button-word') || 'Examinar';
 
   if (typeof $(this).attr('title') != 'undefined') {
     buttonWord = $(this).attr('title');
